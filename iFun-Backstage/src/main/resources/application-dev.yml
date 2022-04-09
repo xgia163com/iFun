@@ -1,0 +1,29 @@
+#name: dev
+server:
+  port: 8011
+
+spring:
+  datasource:
+    #url: jdbc:mysql://localhost:3392/bjz_qqzt_xm1?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3392/bjz_qqzt_xm1?characterEncoding=utf-8&useSSL=false&autoReconnect=true&rewriteBatchedStatements=true&serverTimezone=UTC
+    #   driver-class-name: org.gjt.mm.mysql.Driver   com.mysql.jdbc.Driver com.mysql.cj.jdbc.Driver
+    # 127.0.0.1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    username: root
+
+mybatis:
+  #   配置mapper文件的位置     com/example/demo/dao/mapping/*Mapper.xml
+  #mapper-locations: classpath*:mapping/*Mapper.xml
+  #mapper-locations: classpath:com/example/demo/dao/mapping/*Mapper.xml
+  #mapper-locations: classpath:com/byz/modular/finance/mapper/mapping/*Mapper.xml
+#mapper-locations: classpath:com/byz/modular/**/mapping/*.xml
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #mapper-locations: classpath*:mapping/*Mapper.xml
+  #mapper-locations: classpath:com/example/demo/dao/mapping/*Mapper.xml
+  #mapper-locations: classpath:com/byz/modular/finance/mapper/mapping/*Mapper.xml
+  #mapper-locations: classpath:com/byz/modular/**/mapping/*.xml

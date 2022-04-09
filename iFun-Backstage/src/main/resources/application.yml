@@ -1,0 +1,23 @@
+spring:
+  application:
+    name:
+      'XXXXX后台管理系统'
+  profiles:
+    active: "@spring.profiles.active@"
+  mvc:
+    view:
+      prefix: /pages
+    hiddenmethod:
+      filter:
+        enabled: false
+
+
+
+  #thymeleaf:
+    #  prefix: classpath:/templates/
+
+    #  suffix: .html
+
+    #  content-type: text/html
+    #  cache: false
+  #  mode: LEGACYHTML5
